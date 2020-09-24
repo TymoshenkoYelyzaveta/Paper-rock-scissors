@@ -7,9 +7,9 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className='App'>
+      <div className='app'>
         <div className='info'>
-          <h2>Rock-Paper-Scissors</h2>
+          <h1>Rock-Paper-Scissors</h1>
 
           {/* Stats */}
           <div className='stats-info'>
@@ -25,25 +25,32 @@ class App extends Component {
         </div>
         {/* Choices */}
         <div className='choices'>
-          <div>You</div>
-          <div />
-          <div>Computer</div>
-          {/* Choices buttons */}
-          <div>
-            <button className='rock'>
-              <Rock />
-            </button>
-            <button className='paper'>
-              <Paper />
-            </button>
-            <button className='scissors'>
-              <Scissors />
-            </button>
+          <div className='headers'>
+            <div>You</div>
+
+            <div>Computer</div>
           </div>
 
-          <div className='vs'>vs</div>
-          <div>
-            <button className='computer-choice'>?</button>
+          {/* Choices buttons */}
+          <div className='choice-panel'>
+            <div className='buttons'>
+              <button className='rock'>
+                <Rock />
+              </button>
+              <button className='paper'>
+                <Paper />
+              </button>
+              <button className='scissors'>
+                <Scissors />
+              </button>
+            </div>
+
+            <div className='vs'>vs</div>
+            <div className='computer'>
+              <button className='computer-choice'>
+                <span>?</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
