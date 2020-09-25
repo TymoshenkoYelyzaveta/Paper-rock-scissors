@@ -99,6 +99,10 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  transform: scale(1.1);
+}
+
 button.rock {
   background-color: #e7c35c;
 }
@@ -125,4 +129,73 @@ button.computer-choice span {
   transform: rotate(-0.1turn);
   margin: 0;
   pointer-events: none;
+  opacity: 0.5;
+}
+
+.game-state {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.game-state.win > div {
+  background: #6e9d80;
+}
+
+.game-state.draw > div {
+  background: #e7c35c;
+}
+
+.game-state.lose > div {
+  background: #c5445c;
+}
+
+.game-state > div {
+  width: 60%;
+  text-align: center;
+  padding: 0 40px;
+  border-radius: 10px;
+  z-index: 1;
+  color: #fff;
+  font-size: 60px;
+}
+
+.game-state-content {
+  display: flex;
+  justify-content: center;
+}
+
+.game-state-content p {
+  margin: 40px 15px 30px 0;
+  display: flex;
+  align-items: center;
+}
+
+.game-state-content p:last-of-type {
+  margin-left: 50px;
+}
+
+.game-state-content svg {
+  width: 100px;
+}
+
+.game-state button {
+  display: block;
+  padding: 15px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  flex-shrink: 1;
+  background: #221e32;
+  color: #fdedfd;
 }
